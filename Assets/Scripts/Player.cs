@@ -11,6 +11,16 @@ public class Player : ScriptableObject
     public int Energy = 100;
     public RankType damage = RankType.Weak;
 
+    public void TakeDamage(int damage)
+    {
+        Health -= damage;
+    }
+
+    public void HealDamage(int damage)
+    {
+        Health += damage;
+    }
+
     public int Damage
     {
         get

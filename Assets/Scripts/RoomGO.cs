@@ -13,7 +13,7 @@ public class RoomGO : MonoBehaviour
     private float tileDepth = 1.1f;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         int i = 0;
         for (int x = 0; x < width; x++)
@@ -24,13 +24,18 @@ public class RoomGO : MonoBehaviour
                 go.transform.SetParent(this.transform);
                 go.transform.localScale = Vector3.one;
                 go.transform.position = new Vector3(x * tileWidth, 0, z * tileDepth);
-                if (i % 2 == 0)
+                int r = Random.Range(0, 3);
+                if (r == 0)
                 {
-                    go.isLightCurrent = true;
+                    go.lightType = LightType.Neutral;
                 }
-                else
+                else if (r == 1)
                 {
-                    go.isLightCurrent = false;
+                    go.lightType = LightType.Light;
+                }
+                else if (r == 2)
+                {
+                    go.lightType = LightType.Dark;
                 }
                 i++;
             }

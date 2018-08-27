@@ -6,11 +6,6 @@ public class WorldInput : MonoBehaviour
 {
     // Set this in the Inspector from our Premade World
     public World world;
-    //// Use this for initialization
-    //void Start()
-    //{
-    //}
-
     // Update is called once per frame
     void Update()
     {
@@ -23,4 +18,9 @@ public class WorldInput : MonoBehaviour
             world.ChangeMorph();
         }
     }
+
+    //// Use this for initialization
+    //void Start()
+    //{
+    //}
 }

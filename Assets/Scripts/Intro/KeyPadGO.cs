@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,7 +17,8 @@ public class KeyPadGO : MonoBehaviour
     public TMP_Text alphaText;
 
     public static bool isDoorLocked = true;
-    public static string AccessCode = "4337";
+    public static string[] AccessCodes = { "4337", "43337" };
+    //public static string AccessCode = "4337";
     public static string CurrentCode;
     public LayoutElement le;
 
@@ -206,7 +208,8 @@ public class KeyPadGO : MonoBehaviour
             else if (isDoorLocked)
             {
                 keyText.text = CurrentCode;
-                if (CurrentCode == AccessCode)
+                if (AccessCodes.ToList().Contains(CurrentCode))
+                //if (CurrentCode == AccessCode)
                 {
                     UnlockDoor();
                 }

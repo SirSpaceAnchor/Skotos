@@ -127,6 +127,7 @@
     <Compile Include="Assets\Scripts\FloorGO.cs" />
     <Compile Include="Assets\Scripts\GameGO.cs" />
     <Compile Include="Assets\Scripts\GameResource.cs" />
+    <Compile Include="Assets\Scripts\GunGO.cs" />
     <Compile Include="Assets\Scripts\Intro\DoorGO.cs" />
     <Compile Include="Assets\Scripts\Intro\DoorPanel.cs" />
     <Compile Include="Assets\Scripts\Intro\Enums.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="Assets\Scripts\RoomGO.cs" />
     <Compile Include="Assets\Scripts\SettingsColor.cs" />
     <Compile Include="Assets\Scripts\SettingsLight.cs" />
+    <Compile Include="Assets\Scripts\SettingsOpposite.cs" />
     <Compile Include="Assets\Scripts\SettingsPosition.cs" />
     <Compile Include="Assets\Scripts\SettingsScale.cs" />
     <Compile Include="Assets\Scripts\Strings.cs" />

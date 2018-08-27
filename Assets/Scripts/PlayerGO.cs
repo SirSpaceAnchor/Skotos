@@ -19,21 +19,29 @@ public class PlayerGO : MonoBehaviour
     public TMP_Text text1;
     public TMP_Text text2;
 
+    public void Hurt(int damage)
+    {
+        player.TakeDamage(damage);
+    }
+
+    public void Heal(int damage)
+    {
+        player.HealDamage(damage);
+    }
+
     // Use this for initialization
     void Start()
     {
         player = ScriptableObject.CreateInstance<Player>();
         playerName.text = player.Name;
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        worldText.text = "100/100 Health";
-        playerExtra.text = "100/100 Energy";
-        text0.text = "Light Gun" + " 25/50 bullets";
+        worldText.text = player.Health.ToString() + "/100 Health";
+        playerExtra.text = player.Energy.ToString() + "/100 Energy";
+        text0.text = "Light Gun" + " 25/50";
         text1.text = Strings.Light(world.isLight);
         text2.text = Strings.Morph(world.isMorph);
     }

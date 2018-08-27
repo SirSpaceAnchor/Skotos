@@ -29,7 +29,7 @@ public static class Colors
             _g = 0;
         }
         Vector3 colorV = new Vector3(_r, _b, _g);
-        UnityEngine.Debug.Log(colorV.ToString());
+        //UnityEngine.Debug.Log(colorV.ToString());
         return new Color32((byte)_r, (byte)_g, (byte)_b, 255);
     }
 

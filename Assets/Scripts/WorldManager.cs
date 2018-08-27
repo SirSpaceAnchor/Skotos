@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class WorldManager : MonoBehaviour
 {
+    public static WorldManager instance;
+
     public World world; // How does objects know about the world.
     public ButtonGO lightButton;
     public ButtonGO morphButton;
 
     private void Awake()
     {
+        instance = this;
         world.Reset();
     }
 
@@ -41,5 +44,21 @@ public class WorldManager : MonoBehaviour
     {
         world.ChangeMorph();
         morphButton.text = Strings.Morph(world.isMorph);
+    }
+
+    public static bool isLight
+    {
+        get
+        {
+            return instance.world.isLight;
+        }
+    }
+
+    public static bool isMorph
+    {
+        get
+        {
+            return instance.world.isMorph;
+        }
     }
 }
