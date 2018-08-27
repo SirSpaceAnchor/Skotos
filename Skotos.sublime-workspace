@@ -4,8 +4,72 @@
 		"selected_items":
 		[
 			[
+				"Camera",
+				"CameraRotation()\tvoid"
+			],
+			[
+				"playerVe",
+				"playerVelocity.y"
+			],
+			[
+				"playerV",
+				"playerVelocity.y"
+			],
+			[
+				"moveS",
+				"moveSpeed"
+			],
+			[
+				"Scale",
+				"MovScale()\tfloat"
+			],
+			[
+				"player",
+				"playerVelocity"
+			],
+			[
+				"INTSP",
+				"intspeed2\tfloat"
+			],
+			[
+				"aIRc",
+				"AirControl(Vector3 intdir, float intspeed)\tvoid"
+			],
+			[
+				"sides",
+				"sideStrafeSpeed"
+			],
+			[
+				"D",
+				"Dot(Vector3 lhs, Vector3 rhs)\tfloat"
+			],
+			[
+				"intsp",
+				"intspeed"
+			],
+			[
 				"move",
-				"moveInputHorizontal"
+				"moveSpeed"
+			],
+			[
+				"Trans",
+				"TransformDirection(Vector3 direction)\tVector3"
+			],
+			[
+				"SetM",
+				"SetMovementDir()\tvoid"
+			],
+			[
+				"acc",
+				"accel"
+			],
+			[
+				"d",
+				"deltaTime\tfloat { get; }"
+			],
+			[
+				"wish",
+				"wishdir\tVector3"
 			],
 			[
 				"GetButtonD",
@@ -78,10 +142,6 @@
 			[
 				"Phys",
 				"Physics2D\tPhysics2D"
-			],
-			[
-				"Trans",
-				"Translate(Vector3 translation)\tvoid"
 			],
 			[
 				"mono",
@@ -454,81 +514,36 @@
 			[
 				"AddR",
 				"AddRange(IEnumerable<T> collection)\tvoid"
-			],
-			[
-				"Exe",
-				"Execute()\tvoid"
-			],
-			[
-				"loca",
-				"localRotation\tQuaternion { get; set; }"
-			],
-			[
-				"getComp",
-				"GetComponentInChildren<T>()\tT"
-			],
-			[
-				"MAth",
-				"Mathf\tMathf"
-			],
-			[
-				"Transf",
-				"TransformVariable\tTransformVariable"
-			],
-			[
-				"angula",
-				"angularDrag\tfloat { get; set; }"
-			],
-			[
-				"ve",
-				"velocity"
-			],
-			[
-				"movement",
-				"movementValues\tMovementValues"
-			],
-			[
-				"State",
-				"StateManager\tStateManager"
-			],
-			[
-				"Draw",
-				"DrawRay(Vector3 start, Vector3 dir)\tvoid"
-			],
-			[
-				"Getcom",
-				"GetComponent<T>()\tT"
-			],
-			[
-				"ro",
-				"rotation\tQuaternion { get; set; }"
-			],
-			[
-				"normali",
-				"Normalize()\tvoid"
-			],
-			[
-				"Rigidbody",
-				"RigidbodyConstraints\tRigidbodyConstraints"
-			],
-			[
-				"Seril",
-				"Serializable\t[class]"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "{\n\t\"folders\":\n\t[\n\t\t{\n\t\t\t\"follow_symlinks\":true,\n\t\t\t\"path\":\"./Assets\",\n\t\t\t\"file_exclude_patterns\":\n\t\t\t[\n\t\t\t\t\"*.dll\",\n\t\t\t\t\"*.meta\"\n\t\t\t]\n\t\t}\n\t],\n\t\"solution_file\":\"./Skotos.sln\"\n}\n",
-			"file": "Skotos.sublime-project",
-			"file_size": 176,
-			"file_write_time": 131798666088869542,
+			"file": "Assets/Scripts/FPS_CONTROLLER/PlayerControl.cs",
 			"settings":
 			{
-				"buffer_size": 176,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"buffer_size": 468,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/FPS_CONTROLLER/MovControl.cs",
+			"settings":
+			{
+				"buffer_size": 5201,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/FPS_CONTROLLER/CamControl.cs",
+			"settings":
+			{
+				"buffer_size": 2882,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -601,10 +616,21 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets"
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPS_CONTROLLER"
 	],
 	"file_history":
 	[
+		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/World/World.cs",
+		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/Managers/PlayerInteractions.cs",
+		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/Units/Unit.cs",
+		"/c/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPS_CONTROLLER/QuakeControl.cs",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/CubeMover.cs",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/QuakeControl.cs",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPS_CONTROLLER/FPSController.cs",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Skotos.sublime-project",
+		"/C/Users/Daniel Zamora/Documents/Unity/Hack&Slash/Assets/Scripts/QuakeControl.cs",
 		"/C/Users/Daniel Zamora/TreeClicker/Assets/Micaiah_Stevens_TreeChopping/Scripts/DropGO.cs",
 		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/Intro/LabsDoorEnter.cs",
 		"/C/Users/Daniel Zamora/TreeChop/Assets/GrassInteraction/Scripts/InteractionHolder.cs",
@@ -662,11 +688,8 @@
 		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/World/WorldGeneration.cs",
 		"/c/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/World/World.cs",
 		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/PathFinding/PathfinderMaster.cs",
-		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/Units/Unit.cs",
-		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/Managers/PlayerInteractions.cs",
 		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/PathFinding/Pathfinder.cs",
 		"/C/Users/Daniel Zamora/ProjectVermillion/Assets/Art/Shaders/ToonLit.shader",
-		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/World/World.cs",
 		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/PathFinding/PathFinder.cs",
 		"/c/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/PathFinding/PathFinder.cs",
 		"/C/Users/Daniel Zamora/Downloads/World.cs",
@@ -726,13 +749,7 @@
 		"/C/Users/Daniel Zamora/New Unity Project/Assets/Behavior_Editor/Assets/Scripts/Behavior/Actions/AssignTransform.cs",
 		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/Editors/Custom Inspectors/StateGUI.cs",
 		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/Editors/BehaviorEditor/EditorSettings.cs",
-		"/c/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/Editors/BehaviorGraph.cs",
-		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/Editors/BehaviorGraph.cs",
-		"/C/Users/Daniel Zamora/New Unity Project/Assets/Behavior_Editor/Assets/Scripts/Behavior/ActionHook.cs",
-		"/C/Users/Daniel Zamora/New Unity Project/Assets/Behavior_Editor/Assets/Scripts/ActionHook.cs",
-		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/StrategyPatternSystem/StateManager.cs",
-		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/ScriptableObjectLibrary/Scriptables/Helpers/AssignTransform_REDACT.cs",
-		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/StrategyPatternSystem/Actions/AssignTransform.cs"
+		"/c/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/Editors/BehaviorGraph.cs"
 	],
 	"find":
 	{
@@ -767,35 +784,118 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Skotos.sublime-project",
+					"file": "Assets/Scripts/FPS_CONTROLLER/PlayerControl.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 176,
+						"buffer_size": 468,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								176,
-								176
+								25,
+								25
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"162,164": "Name should have prefix '_'. (Rule 'Fields').",
+								"186,188": "Name should have prefix '_'. (Rule 'Fields').",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"408,418": "Method 'controller' can be made static.",
+								"448,458": "Local variable 'controller' is never used"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/FPS_CONTROLLER/MovControl.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1221,
+								1221
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"1114,1124": "Cannot convert from ? to System.Boolean",
+								"1183,1193": "Error: Boolean",
+								"1243,1247": "'?' does not contain a definition for 'Move'",
+								"1280,1281": "'?' does not contain a definition for 'Move'",
+								"4435,4445": "Cannot convert from ? to System.Boolean"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 145.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/FPS_CONTROLLER/CamControl.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2882,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2615,
+								2615
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"2455,2456": "Cannot convert from UnityEngine.CharacterController to ?",
+								"2581,2584": "Could not determine type",
+								"2605,2613": "'?' does not contain a definition for 'velocity'",
+								"2628,2629": "'?' does not contain a definition for 'y'",
+								"2632,2633": "Cannot convert from System.Int32 to ?",
+								"2709,2718": "'?' does not contain a definition for 'magnitude'",
+								"2721,2724": "Error: Int32"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
