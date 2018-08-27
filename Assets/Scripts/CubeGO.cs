@@ -41,9 +41,9 @@ public class CubeGO : MonoBehaviour
         }
     }
 
-    public void SwitchMorph()
+    public void SwitchMorph(bool isMorph)
     {
-        isMorphed = !isMorphed;
+        isMorphed = isMorph;
         cube.positionSettings.MorphSwitch(isMorphed);
     }
 }

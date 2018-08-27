@@ -35,26 +35,26 @@ public class World : ScriptableObject
 
     public void Apply()
     {
-        if (OnLightChanged != null)
-        {
-            OnLightChanged(isLight);
-        }
-        if (OnMorphChanged != null)
-        {
-            OnMorphChanged(isMorph);
-        }
     }
 
     public void ChangeLight()
     {
         isLight = !isLight;
-        Apply();
+        if (OnLightChanged != null)
+        {
+            OnLightChanged(isLight);
+        }
+        //Apply();
     }
 
     public void ChangeMorph()
     {
         isMorph = !isMorph;
-        Apply();
+        if (OnMorphChanged != null)
+        {
+            OnMorphChanged(isMorph);
+        }
+        //Apply();
     }
 
 }

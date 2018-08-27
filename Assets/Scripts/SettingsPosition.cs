@@ -25,10 +25,11 @@ public class SettingsPosition : Settings
 
     public override void MorphSwitch(bool newMorph)
     {
+        isMorphCurrent = newMorph;
         base.MorphSwitch(newMorph);
         if (allowMorph)
         {
-            if (isMorphCurrent)
+            if (newMorph)
             {
                 desiredPosition = morphPosition;
                 desiredRotation = morphRotation;

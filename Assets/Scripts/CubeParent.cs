@@ -53,9 +53,10 @@ public class CubeParent : MonoBehaviour
 
     void MorphChanged(bool newMorph)
     {
+        isMorphed = newMorph;
         for (int i = 0; i < cubes.Length; i++)
         {
-            cubes[i].SwitchMorph();
+            cubes[i].SwitchMorph(isMorphed);
             //if (cubes[i].cube.allowSwitch)
             //{
             //    //cubes[i].cube.isLightCurrent = newLight;

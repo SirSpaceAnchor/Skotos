@@ -24,6 +24,8 @@ public class ButtonGO : LightMonoBehaviour
     {
         textObject = GetComponentInChildren<TMP_Text>();
         image = GetComponent<Image>();
+        image.color = Color.white;
+        textObject.color = Color.black;
         base.Awake();
     }
 

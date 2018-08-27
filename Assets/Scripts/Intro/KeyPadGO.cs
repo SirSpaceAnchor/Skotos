@@ -18,9 +18,12 @@ public class KeyPadGO : MonoBehaviour
     public static bool isDoorLocked = true;
     public static string AccessCode = "4337";
     public static string CurrentCode;
+    public LayoutElement le;
+
     // Use this for initialization
     void Start()
     {
+        le = GetComponent<LayoutElement>();
         CurrentCode = Strings.LOCKED;
         isDoorLocked = true;
         button = GetComponent<Button>();
@@ -32,6 +35,19 @@ public class KeyPadGO : MonoBehaviour
         button.onClick.AddListener(PressKey);
         number = Enums.Number(nNumber);
         text = Enums.NumberString(nNumber);
+        if (nNumber == Numbers.Display || nNumber == Numbers.Clear || nNumber == Numbers.Zero)
+        {
+            alphaText.gameObject.SetActive(false);
+            le.ignoreLayout = true;
+            keyText.gameObject.SetActive(true);
+            alphaText.gameObject.SetActive(false);
+        }
+        else
+        {
+            le.ignoreLayout = false;
+            keyText.gameObject.SetActive(true);
+            alphaText.gameObject.SetActive(true);
+        }
         if (nNumber == Numbers.Clear)
         {
             keyText.text = text;

@@ -7,9 +7,10 @@ using UnityEngine;
 #if UNITY_EDITOR
 [ExecuteInEditMode]
 #endif
+
 public class CountdownTimer : MonoBehaviour
 {
-    public TMP_Text countDownTimerText;
+    public ButtonGO buttonGO;
     public DateTime launchDate;
     string TimeToFinish = "September 1 2018 12:00 AM";
     public string countDown;
@@ -18,6 +19,10 @@ public class CountdownTimer : MonoBehaviour
 
     private void OnValidate()
     {
+        if (buttonGO == null)
+        {
+            buttonGO = GetComponent<ButtonGO>();
+        }
         DateTime.TryParse(TimeToFinish, out launchDate);
         //UnityEngine.Debug.Log(launchDate.ToString());
         if (isRunning == false)
@@ -35,9 +40,9 @@ public class CountdownTimer : MonoBehaviour
         //TimeSpan t = DateTime.Now - timeToFinish;
         countDown = string.Format("{0} Days, {1} Hours, {2} Minutes, {3} Seconds til launch.", t.Days, t.Hours, t.Minutes, t.Seconds);
 #if UNITY_EDITOR
-        countDownTimerText.text = countDown;
+        buttonGO.text = countDown;
 #else
-        countDownTimerText.text = "";
+        buttonGO.text = "";
 #endif
     }
 
