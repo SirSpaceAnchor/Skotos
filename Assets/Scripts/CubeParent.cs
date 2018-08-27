@@ -38,6 +38,7 @@ public class CubeParent : MonoBehaviour
         cubes = GetComponentsInChildren<CubeGO>();
         for (int i = 0; i < cubes.Length; i++)
         {
+            cubes[i].Register();
             isLightCurrent = cubes[i].cube.lightSettings.isLightCurrent;
             cubes[i].transform.position = defaultStart.position;
             cubes[i].transform.rotation = defaultStart.rotation;

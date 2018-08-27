@@ -18,11 +18,12 @@ public class GameGO : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject gameMenuPanel;
 
+    public ButtonGO menuButton;
     public ButtonGO startButton;
     public ButtonGO optionsButton;
     public ButtonGO quitButton;
 
-    public bool showIntro = false;
+    public bool showIntro = true;
 
     public Scene currentScene;
 
@@ -65,6 +66,15 @@ public class GameGO : MonoBehaviour
             StartGame();
             CloseAll();
         }
+
+        instance.menuButton.button.onClick.RemoveAllListeners();
+        instance.menuButton.button.onClick.AddListener(instance.GameIntro);
+
+        instance.optionsButton.button.onClick.RemoveAllListeners();
+        instance.optionsButton.button.onClick.AddListener(instance.GameOptions);
+
+        instance.quitButton.button.onClick.RemoveAllListeners();
+        instance.quitButton.button.onClick.AddListener(instance.GameQuit);
     }
 
     // Update is called once per frame
@@ -95,7 +105,12 @@ public class GameGO : MonoBehaviour
 
     public static void StartMenu()
     {
-        instance.startButton.text = "Start";
+        string intro = "(no intro)";
+        if (instance.showIntro)
+        {
+            intro = "(with intro)";
+        }
+        instance.startButton.text = "Start" + Strings.Space + intro;
         instance.startButton.button.onClick.RemoveAllListeners();
         instance.startButton.button.onClick.AddListener(instance.GameStart);
     }
@@ -110,6 +125,20 @@ public class GameGO : MonoBehaviour
     public static void SaveGame()
     {
         instance.GameSave();
+    }
+
+    public void GameIntro()
+    {
+        showIntro = !showIntro;
+        StartMenu();
+        if (showIntro)
+        {
+            AudioManager.instance.Play(Strings.GameIntro_0);
+        }
+        else
+        {
+            AudioManager.instance.Play(Strings.GameIntro_1);
+        }
     }
 
     public void GameResume()
@@ -137,7 +166,7 @@ public class GameGO : MonoBehaviour
     public void GameStart()
     {
         CloseAll();
-        StartGame(); // FOR Now?? move to a better area?
+        StartGame(); // FOR Now?? move to a better area? - Setup menu to be for the game.
 #if UNITY_EDITOR
         if (showIntro)
         {

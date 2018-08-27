@@ -12,6 +12,14 @@ public class CubeGO : MonoBehaviour
 
     private void Awake()
     {
+    }
+
+    /// <summary>
+    /// Function to be called by the parent to set its starting location
+    /// Did this; so other scripts can run first, such as CubeShape
+    /// </summary>
+    public void Register()
+    {
         //cube = ScriptableObject.CreateInstance<Cube>();
         cube = new Cube(this.transform.position, this.transform.eulerAngles, true, 1.0f);
         cube.SetStart(GetComponentInChildren<MeshRenderer>());

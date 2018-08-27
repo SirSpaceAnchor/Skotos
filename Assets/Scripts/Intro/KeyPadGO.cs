@@ -38,7 +38,14 @@ public class KeyPadGO : MonoBehaviour
         if (nNumber == Numbers.Display || nNumber == Numbers.Clear || nNumber == Numbers.Zero)
         {
             alphaText.gameObject.SetActive(false);
-            le.ignoreLayout = true;
+            if (nNumber == Numbers.Display)
+            {
+                le.ignoreLayout = true;
+            }
+            else
+            {
+                le.ignoreLayout = false;
+            }
             keyText.gameObject.SetActive(true);
             alphaText.gameObject.SetActive(false);
         }
@@ -48,7 +55,57 @@ public class KeyPadGO : MonoBehaviour
             keyText.gameObject.SetActive(true);
             alphaText.gameObject.SetActive(true);
         }
-        if (nNumber == Numbers.Clear)
+
+        switch (nNumber)
+        {
+            case Numbers.One:
+                number = 1;
+                text = "A, B, C";
+                break;
+            case Numbers.Two:
+                number = 2;
+                text = "D, E, F";
+                break;
+            case Numbers.Three:
+                number = 3;
+                text = "G, H, I";
+                break;
+            case Numbers.Four:
+                number = 4;
+                text = "J, K, L";
+                break;
+            case Numbers.Five:
+                number = 5;
+                text = "M, N, O";
+                break;
+            case Numbers.Six:
+                number = 6;
+                text = "P, Q, R";
+                break;
+            case Numbers.Seven:
+                number = 7;
+                text = "S, T, U";
+                break;
+            case Numbers.Eight:
+                number = 8;
+                text = "V, W, X";
+                break;
+            case Numbers.Nine:
+                number = 9;
+                text = "Y, Z";
+                break;
+            case Numbers.Zero:
+                number = 0;
+                text = number.ToString();
+                break;
+            case Numbers.Display:
+                text = nNumber.ToString();
+                break;
+            case Numbers.Clear:
+                text = nNumber.ToString();
+                break;
+        }
+        if (nNumber == Numbers.Display || nNumber == Numbers.Clear || nNumber == Numbers.Zero)
         {
             keyText.text = text;
             alphaText.text = "";
@@ -94,7 +151,7 @@ public class KeyPadGO : MonoBehaviour
         if (CurrentCode == Strings.LOCKED
             || CurrentCode == Strings.OPENED
             || CurrentCode == Strings.ERROR
-            || CurrentCode == Strings.DoorLockCODE 
+            || CurrentCode == Strings.DoorLockCODE
             )
         {
             return true;

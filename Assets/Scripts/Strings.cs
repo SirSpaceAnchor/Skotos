@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 0 - True
+/// 1 - False (Any non-zero value)
+/// </summary>
 public static class Strings
 {
     public const string OPENED = "OPENED"; //KeyPad Access
@@ -9,9 +13,14 @@ public static class Strings
     public const string ERROR = "ERROR";
     public const string DoorLockCODE = "00";
 
-    public const string GameMenu = "Menu";
-    public const string GameLabs = "Labs";
-    public const string GameGame = "Game";
+    public const string Space = " ";
+
+    public const string GameMenu = "Menu_5.6.6"; // Remove -5.6.6 for 2018.2
+    public const string GameLabs = "Labs_5.6.6"; // Remove -5.6.6 for 2018.2
+    public const string GameGame = "Level_0_5.6.6"; // Remove -5.6.6 for 2018.2
+
+    public const string GameIntro_0 = "Show me how I got here!";
+    public const string GameIntro_1 = "I don't need no intro";
 
     public static string Morph(bool isMorph)
     {

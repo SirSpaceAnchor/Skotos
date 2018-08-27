@@ -7,7 +7,7 @@ public static class Colors
 {
     public static Color32 DarkenColor(Color32 c, float v)
     {
-        Colors.Log(c);
+        //Colors.Log(c);
         //Vector3 colorV2 = new Vector3(c.r, c.b, c.g);
         //UnityEngine.Debug.Log(colorV2.ToString());
         float _r = c.r;
