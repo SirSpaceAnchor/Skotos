@@ -299,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4095cf3e2260334b91555cea45102c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 548455560}
   mc: {fileID: 548455558}
   cc: {fileID: 548455559}
 --- !u!114 &548455558
@@ -312,8 +313,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df32f01fdee6f59419a3a029338abc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardMove: 0
-  rightMove: 0
+  pc: {fileID: 548455557}
+  forwardMove: 1
+  rightMove: 1
   moveSpeed: 7
   runAcceleration: 14
   runDeacceleration: 10
@@ -338,6 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerView: {fileID: 1439992885}
+  pc: {fileID: 548455557}
   playerViewYOffset: 0.6
   xMouseSensitivity: 30
   yMouseSensitivity: 30

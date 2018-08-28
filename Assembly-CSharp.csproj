@@ -75,9 +75,9 @@
      <Compile Include="Assets\Scripts\CubeGO.cs" />
      <Compile Include="Assets\Scripts\CubeMover.cs" />
      <Compile Include="Assets\Scripts\CubeParent.cs" />
-     <Compile Include="Assets\Scripts\FPS_CONTROLLER\CamControl.cs" />
-     <Compile Include="Assets\Scripts\FPS_CONTROLLER\MovControl.cs" />
-     <Compile Include="Assets\Scripts\FPS_CONTROLLER\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\FPSControl\CamControl.cs" />
+     <Compile Include="Assets\Scripts\FPSControl\MovControl.cs" />
+     <Compile Include="Assets\Scripts\FPSControl\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\GameGO.cs" />
      <Compile Include="Assets\Scripts\GameResource.cs" />
      <Compile Include="Assets\Scripts\Intro\DoorGO.cs" />
