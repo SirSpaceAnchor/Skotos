@@ -23,6 +23,7 @@ namespace FC
 			cc.CameraMovAdj();
 
 			mc.InitMovement();
+			mc.InitMovementType();
 			mc.CalcMaxVel();
 		}
 	}

@@ -86,7 +86,7 @@ namespace FC
 	    
 	    public void ControlInit()
 	    {
-			pc.controller = GetComponent<CharacterController>();	    	
+			pc.controller = GetComponent<CharacterController>();
 	    }
 
 	    private void OnGUI()

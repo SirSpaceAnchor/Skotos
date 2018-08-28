@@ -7,8 +7,8 @@ namespace FC
 	public class MovControl : MonoBehaviour
 	{
 		public PlayerControl pc;
-		public float forwardMove;
-		public float rightMove;
+		private float forwardMove;
+		private float rightMove;
 
 	    public float moveSpeed = 7.0f;                
 	    public float runAcceleration = 14.0f;         
@@ -30,15 +30,18 @@ namespace FC
 
 	    private bool intJump = false;
 
-	    public void InitMovement()
+	    public void InitMovementType()
 	    {
         QueueJump();
         if(pc.controller.isGrounded)
             GroundMove();
         else if(!pc.controller.isGrounded)
-            AirMove();
-		
-        pc.controller.Move(playerVelocity * Time.deltaTime);	    	
+            AirMove();	    	
+	    }
+
+	    public void InitMovement()
+	    {
+			pc.controller.Move(playerVelocity * Time.deltaTime);
 	    }
 
 	    public void CalcMaxVel()
@@ -66,21 +69,21 @@ namespace FC
 
 	    public void GroundMove()
 	    {
-	    	Vector3 intdir;
+			Vector3 intdir;
 
-	    	if(!intJump)
-	    		ApplyFriction(1.0f);
-	    	else
-	    		ApplyFriction(0);
+			if(!intJump)
+				ApplyFriction(1.0f);
+			else
+				ApplyFriction(0);
 
-	    	float scale = MovScale();
+			float scale = MovScale();
 
-	    	intdir = new Vector3(rightMove, 0, forwardMove);
-	    	intdir = transform.TransformDirection(intdir);
-	    	intdir.Normalize();
-	    	moveDirectionNorm = intdir;
+			intdir = new Vector3(rightMove, 0, forwardMove);
+			intdir = transform.TransformDirection(intdir);
+			intdir.Normalize();
+			moveDirectionNorm = intdir;
 
-	    	var intspeed = intdir.magnitude;
+			var intspeed = intdir.magnitude;
 			intspeed *= moveSpeed;
 
 			Accelerate(intdir, intspeed, runAcceleration);
@@ -92,7 +95,6 @@ namespace FC
 				playerVelocity.y = jumpSpeed;
 				intJump = false;
 			}
-
 	    }
 
 		private void AirMove()
