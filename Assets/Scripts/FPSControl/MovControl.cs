@@ -193,16 +193,34 @@ namespace FC
 				drop = control * friction * Time.deltaTime * t;
 			}
 
+			newspeed = speed - drop;
+			playerFriction = newspeed;
+			if(newspeed < 0)
+				newspeed = 0;
+			if(speed > 0)
+				newspeed /= speed;
+
+			playerVelocity.x *= newspeed;
+			playerVelocity.z *= newspeed;
+
 		}
 
-	    private void Accelerate(Vector3 intdir, float wishspeed, float accel)
+	    private void Accelerate(Vector3 intdir, float intspeed, float accel)
 	    {
 	    	float addspeed;
         	float accelspeed;
         	float currentspeed;
 
         	currentspeed = Vector3.Dot(playerVelocity, intdir);
+        	addspeed = intspeed - currentspeed;
+        	if(addspeed <= 0)
+        		return;
+        	accelspeed = accel * Time.deltaTime * intspeed;
+        	if(accelspeed > addspeed)
+        		accelspeed = accelspeed;
 
+        	playerVelocity.x += accelspeed * intdir.x;
+        	playerVelocity.z += accelspeed * intdir.z;
 	    }
 
 	    private float MovScale()
