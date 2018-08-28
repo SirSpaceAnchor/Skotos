@@ -207,17 +207,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pc: {fileID: 114203464807438632}
-  moveSpeed: 7
-  runAcceleration: 14
-  runDeacceleration: 10
-  airAcceleration: 2
+  moveSpeed: 10
+  runAcceleration: 2
+  runDeacceleration: 1
+  airAcceleration: 1
   airDecceleration: 2
   airControl: 0.3
-  sideStrafeAcceleration: 50
-  sideStrafeSpeed: 1
-  jumpSpeed: 8
-  moveScale: 1
-  friction: 6
+  sideStrafeAcceleration: 10
+  sideStrafeSpeed: 10
+  jumpSpeed: 5
+  moveScale: 2
+  friction: 5
   gravity: 20
 --- !u!114 &114017060861513042
 MonoBehaviour:
@@ -232,9 +232,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerView: {fileID: 4409559442129812}
   pc: {fileID: 114203464807438632}
-  playerViewYOffset: 0.6
-  xMouseSensitivity: 30
-  yMouseSensitivity: 30
+  playerViewYOffset: 1
+  xMouseSensitivity: 55
+  yMouseSensitivity: 55
   fpsDisplayRate: 4
   style:
     m_Name: 
@@ -290,7 +290,7 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 0}
+    m_Font: {fileID: 12800000, guid: 20decba751af62e45b7e1b4f42c7d1d5, type: 3}
     m_FontSize: 0
     m_FontStyle: 0
     m_Alignment: 0
