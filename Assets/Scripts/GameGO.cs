@@ -67,14 +67,27 @@ public class GameGO : MonoBehaviour
             CloseAll();
         }
 
-        instance.menuButton.button.onClick.RemoveAllListeners();
-        instance.menuButton.button.onClick.AddListener(instance.GameIntro);
+        if (instance == null)
+        {
+            return;
+        }
 
-        instance.optionsButton.button.onClick.RemoveAllListeners();
-        instance.optionsButton.button.onClick.AddListener(instance.GameOptions);
+        if (instance.menuButton != null)
+        {
+            instance.menuButton.button.onClick.RemoveAllListeners();
+            instance.menuButton.button.onClick.AddListener(instance.GameIntro);
+        }
 
-        instance.quitButton.button.onClick.RemoveAllListeners();
-        instance.quitButton.button.onClick.AddListener(instance.GameQuit);
+        if (instance.optionsButton != null)
+        {
+            instance.optionsButton.button.onClick.RemoveAllListeners();
+            instance.optionsButton.button.onClick.AddListener(instance.GameOptions);
+        }
+        if (instance.quitButton != null)
+        {
+            instance.quitButton.button.onClick.RemoveAllListeners();
+            instance.quitButton.button.onClick.AddListener(instance.GameQuit);
+        }
     }
 
     // Update is called once per frame
@@ -133,11 +146,11 @@ public class GameGO : MonoBehaviour
         StartMenu();
         if (showIntro)
         {
-            AudioManager.instance.Play(Strings.GameIntro_0);
+            AudioManager.instance.Play(Strings.GameIntro_0, true);
         }
         else
         {
-            AudioManager.instance.Play(Strings.GameIntro_1);
+            AudioManager.instance.Play(Strings.GameIntro_1, true);
         }
     }
 

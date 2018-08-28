@@ -113,7 +113,13 @@
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
-    <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Constant.cs" />
+    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
+    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
+    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IgnoreSnapAttribute.cs" />
+    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
+    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
+    <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
     <Compile Include="Assets\Scripts\ButtonGO.cs" />
     <Compile Include="Assets\Scripts\CameraGO.cs" />
     <Compile Include="Assets\Scripts\Colors.cs" />
@@ -124,6 +130,9 @@
     <Compile Include="Assets\Scripts\CubeParent.cs" />
     <Compile Include="Assets\Scripts\CubeRotater.cs" />
     <Compile Include="Assets\Scripts\CubeShape.cs" />
+    <Compile Include="Assets\Scripts\FPSControl\CamControl.cs" />
+    <Compile Include="Assets\Scripts\FPSControl\MovControl.cs" />
+    <Compile Include="Assets\Scripts\FPSControl\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\FloorGO.cs" />
     <Compile Include="Assets\Scripts\GameGO.cs" />
     <Compile Include="Assets\Scripts\GameResource.cs" />
@@ -135,7 +144,11 @@
     <Compile Include="Assets\Scripts\Intro\LabsDoorEnter.cs" />
     <Compile Include="Assets\Scripts\Intro\PanelGO.cs" />
     <Compile Include="Assets\Scripts\Intro\PersonController.cs" />
+    <Compile Include="Assets\Scripts\Level\RotationParent.cs" />
     <Compile Include="Assets\Scripts\LightMonoBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Micaiah\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Micaiah\AudioSound.cs" />
+    <Compile Include="Assets\Scripts\Micaiah\HellRespawn.cs" />
     <Compile Include="Assets\Scripts\Old\RigidMover.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerGO.cs" />
@@ -152,6 +165,8 @@
     <Compile Include="Assets\Scripts\WorldManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Fonts\RaleWay\SIL Open Font License.txt" />
+    <None Include="Assets\Fonts\UbuntuMono\UBUNTU FONT LICENCE.txt" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
@@ -174,23 +189,9 @@
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
+    <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
+    <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
     <None Include="Assets\_Store-5.6.6\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\_Store-5.6.6\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\_Store-5.6.6\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />

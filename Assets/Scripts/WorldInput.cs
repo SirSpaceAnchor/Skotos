@@ -11,6 +11,7 @@ public class WorldInput : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            AudioManager.instance.Play(StatusType.WakeUp.ToString(), true);
             world.ChangeLight();
         }
         if (Input.GetKeyDown(KeyCode.G))

@@ -1,0 +1,74 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Micaiah-AnchorVO_data" version="1.3.0" audacityversion="2.1.2" sel0="33.6921541950" sel1="34.9460317460" vpos="64" h="7.9528344671" zoom="86.1328125000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="GENRE" value="FPS"/>
+		<tag name="ARTIST" value="Micaiah Stevens"/>
+		<tag name="TRACKNUMBER" value="01"/>
+		<tag name="TITLE" value="Player Actions"/>
+		<tag name="YEAR" value="2018"/>
+		<tag name="ALBUM" value="Skotos-Light"/>
+		<tag name="COMMENTS" value="First Pass Audio"/>
+	</tags>
+	<wavetrack name="Audio Track" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="474880">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000005.au" len="262144" min="-0.61319" max="0.646881" rms="0.03442"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0000cd5.au" len="212736" min="-0.9245" max="0.999969" rms="0.053884"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<labeltrack name="Label Track" numlabels="6" height="73" minimized="0" isSelected="0">
+		<label t="0.4411791383" t1="1.6021768707" title="Come Get Some"/>
+		<label t="2.4845351474" t1="3.9357823129" title="Im Anchoring For Trouble"/>
+		<label t="4.8297505669" t1="6.0720181406" title="This is not a Gun"/>
+		<label t="6.5596371882" t1="7.9760544218" title="It&apos;s a Light Gun"/>
+		<label t="8.6958730159" t1="9.3924716553" title="Gimmea"/>
+		<label t="9.6362811791" t1="10.6115192744" title="GimmeGimme"/>
+	</labeltrack>
+	<wavetrack name="Audio Track" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="11.10845805">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="540160">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000904.au" len="262144" min="-0.635315" max="0.742035" rms="0.045463"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0000317.au" len="262144" min="-0.734772" max="0.703064" rms="0.042624"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e00001a7.au" len="15872" min="-0.008911" max="0.007843" rms="0.000703"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Audio Track" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="23.91426304">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="572800">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000cf0.au" len="262144" min="-1.0" max="0.933258" rms="0.061667"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e000095c.au" len="262144" min="-1.0" max="0.839569" rms="0.050351"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000a95.au" len="48512" min="-0.52005" max="0.483795" rms="0.044499"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<labeltrack name="Label Track" numlabels="6" height="65" minimized="0" isSelected="0">
+		<label t="24.9614512472" t1="26.0643990930" title="Real - Show me How I got here"/>
+		<label t="26.8190476190" t1="27.8407256236" title="Real - I don&apos;t Need no intro"/>
+		<label t="28.6534240363" t1="30.1395011338" title="Real - Time to work on Project Light"/>
+		<label t="30.7316099773" t1="31.7881179138" title="Real - Just a door code"/>
+		<label t="32.2060770975" t1="33.2277551020" title="Real - Not a Leet"/>
+		<label t="33.6921541950" t1="34.9460317460" title="Real - Let Me guess"/>
+	</labeltrack>
+</project>

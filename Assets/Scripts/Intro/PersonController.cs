@@ -20,9 +20,9 @@ public class PersonController : MonoBehaviour
         //GameGO.Check();
     }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
+    // Update is called once per frame
+    void Update()
+    {
 
-    //}
+    }
 }

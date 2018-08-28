@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes-5.6.6/Level_0_5.6.6.unity
+- path: Assets/Scenes-5.6.6/Level_Random.unity
   isLoaded: 1
   isActive: 1

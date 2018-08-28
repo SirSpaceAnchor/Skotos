@@ -19,14 +19,22 @@ public class GunGO : MonoBehaviour
     {
         points = new List<Vector3>();
         points.Add(aimStart.position);
-        RaycastHit[] hits = Physics.RaycastAll(aimStart.position, transform.forward * 20);
+        RaycastHit[] hits = Physics.RaycastAll(aimStart.position, aimStart.transform.forward * 20);
         Vector3 fartest = aimStart.position + Vector3.one * 255;
         float farDistance = Mathf.Infinity;
-        foreach(RaycastHit hit in hits)
+        if (hits.Length == 0)
         {
-            if (Vector3.Distance(hit.point, fartest) < farDistance)
+            AddPoint(transform.forward * 20);
+        }
+        else
+        {
+            foreach (RaycastHit hit in hits)
             {
-                EndPoint(hit.point);
+                AddPoint(hit.point);
+                //if (Vector3.Distance(hit.point, fartest) < farDistance)
+                //{
+                //    EndPoint(hit.point);
+                //}
             }
         }
     }

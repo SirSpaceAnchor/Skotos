@@ -19,12 +19,18 @@ public class WorldManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        lightButton.button.onClick.RemoveAllListeners();
-        lightButton.button.onClick.AddListener(ChangeLight);
-        lightButton.text = Strings.Light(world.isLight);
-        morphButton.button.onClick.RemoveAllListeners();
-        morphButton.button.onClick.AddListener(ChangeMorph);
-        morphButton.text = Strings.Morph(world.isMorph);
+        if (lightButton != null)
+        {
+            lightButton.button.onClick.RemoveAllListeners();
+            lightButton.button.onClick.AddListener(ChangeLight);
+            lightButton.text = Strings.Light(world.isLight);
+        }
+        if (morphButton != null)
+        {
+            morphButton.button.onClick.RemoveAllListeners();
+            morphButton.button.onClick.AddListener(ChangeMorph);
+            morphButton.text = Strings.Morph(world.isMorph);
+        }
         world.Apply();
     }
 
