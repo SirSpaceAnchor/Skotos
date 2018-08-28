@@ -520,16 +520,16 @@
 	"buffers":
 	[
 		{
-			"file": "Assets/Scripts/FPS_CONTROLLER/PlayerControl.cs",
+			"file": "Assets/Scripts/FPSControl/PlayerControl.cs",
 			"settings":
 			{
-				"buffer_size": 468,
+				"buffer_size": 438,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Assets/Scripts/FPS_CONTROLLER/MovControl.cs",
+			"file": "Assets/Scripts/FPSControl/MovControl.cs",
 			"settings":
 			{
 				"buffer_size": 5201,
@@ -538,7 +538,7 @@
 			}
 		},
 		{
-			"file": "Assets/Scripts/FPS_CONTROLLER/CamControl.cs",
+			"file": "Assets/Scripts/FPSControl/CamControl.cs",
 			"settings":
 			{
 				"buffer_size": 2882,
@@ -618,10 +618,16 @@
 	[
 		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets",
 		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts",
-		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPS_CONTROLLER"
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPS_CONTROLLER",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPSControl"
 	],
 	"file_history":
 	[
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPS_CONTROLLER/PlayerControl.cs",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPS_CONTROLLER/CamControl.cs",
+		"/c/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPS_CONTROLLER/CamControl.cs",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPS_CONTROLLER/MovControl.cs",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPSControl/CamControl.cs",
 		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/World/World.cs",
 		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/Managers/PlayerInteractions.cs",
 		"/C/Users/Daniel Zamora/ProjectIndigo/Assets/Scripts/Units/Unit.cs",
@@ -744,12 +750,7 @@
 		"/C/Users/Daniel Zamora/TPS_A01/Assets/Scriptables/Helpers/AssignTransform.cs",
 		"/C/Users/Daniel Zamora/New Unity Project/Assets/Behavior_Editor/Assets/Scripts/Behavior/Actions/FollowTransform.cs",
 		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/Editors/BehaviorEditor/BehaviorEditor.cs",
-		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/StrategyPatternSystem/ActionHook.cs",
-		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/StrategyPatternSystem/State.cs",
-		"/C/Users/Daniel Zamora/New Unity Project/Assets/Behavior_Editor/Assets/Scripts/Behavior/Actions/AssignTransform.cs",
-		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/Editors/Custom Inspectors/StateGUI.cs",
-		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/Editors/BehaviorEditor/EditorSettings.cs",
-		"/c/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/Editors/BehaviorGraph.cs"
+		"/C/Users/Daniel Zamora/Documents/Unity/HacknSlash_Redux/Assets/Scripts/StrategyPatternSystem/ActionHook.cs"
 	],
 	"find":
 	{
@@ -789,19 +790,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/FPS_CONTROLLER/PlayerControl.cs",
+					"file": "Assets/Scripts/FPSControl/PlayerControl.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 468,
+						"buffer_size": 438,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25,
-								25
+								438,
+								438
 							]
 						],
 						"settings":
@@ -809,13 +810,13 @@
 							"oops":
 							{
 								"0,5": "Using directive is not used by code and can be removed safely.",
-								"162,164": "Name should have prefix '_'. (Rule 'Fields').",
-								"186,188": "Name should have prefix '_'. (Rule 'Fields').",
-								"26,31": "Using directive is not used by code and can be removed safely.",
-								"408,418": "Method 'controller' can be made static.",
-								"448,458": "Local variable 'controller' is never used"
+								"171,181": "Name should have prefix '_'. (Rule 'Fields').",
+								"203,205": "Name should have prefix '_'. (Rule 'Fields').",
+								"227,229": "Name should have prefix '_'. (Rule 'Fields').",
+								"26,31": "Using directive is not used by code and can be removed safely."
 							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -826,7 +827,7 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Assets/Scripts/FPS_CONTROLLER/MovControl.cs",
+					"file": "Assets/Scripts/FPSControl/MovControl.cs",
 					"semi_transient": false,
 					"settings":
 					{
@@ -837,24 +838,56 @@
 						"selection":
 						[
 							[
-								1221,
-								1221
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"1114,1124": "Cannot convert from ? to System.Boolean",
-								"1183,1193": "Error: Boolean",
-								"1243,1247": "'?' does not contain a definition for 'Move'",
-								"1280,1281": "'?' does not contain a definition for 'Move'",
-								"4435,4445": "Cannot convert from ? to System.Boolean"
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"1021,1026": "Initializing field by default value is redundant",
+								"162,164": "Name should have prefix '_'. (Rule 'Fields').",
+								"181,192": "Name should have prefix '_'. (Rule 'Fields').",
+								"1818,1820": "Convert to '&=' expresssion",
+								"2048,2049": "Assignment is redundant",
+								"209,218": "Name should have prefix '_'. (Rule 'Fields').",
+								"239,248": "Name should have prefix '_'. (Rule 'Fields').",
+								"2515,2520": "Assignment is redundant",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"291,306": "Name should have prefix '_'. (Rule 'Fields').",
+								"2917,2919": "Convert to '?:' expression",
+								"3046,3057": "Comparison of floating point numbers can be unequal due to the differing precision of the two values.",
+								"3066,3075": "Comparison of floating point numbers can be unequal due to the differing precision of the two values.",
+								"343,360": "Name should have prefix '_'. (Rule 'Fields').",
+								"395,410": "Name should have prefix '_'. (Rule 'Fields').",
+								"4311,4319": "Local variable 'newspeed' is never used",
+								"4324,4329": "Variable could be moved to a nested scope",
+								"4401,4405": "Assignment is redundant",
+								"447,463": "Name should have prefix '_'. (Rule 'Fields').",
+								"4525,4529": "Assignment is redundant",
+								"4635,4644": "Parameter 'wishspeed' is never used",
+								"4652,4657": "Parameter 'accel' is never used",
+								"4678,4686": "Local variable 'addspeed' is never used",
+								"4703,4713": "Local variable 'accelspeed' is never used",
+								"4754,4766": "Assignment is redundant",
+								"499,509": "Name should have prefix '_'. (Rule 'Fields').",
+								"551,573": "Name should have prefix '_'. (Rule 'Fields').",
+								"603,618": "Name should have prefix '_'. (Rule 'Fields').",
+								"655,664": "Name should have prefix '_'. (Rule 'Fields').",
+								"707,716": "Name should have prefix '_'. (Rule 'Fields').",
+								"743,751": "Name should have prefix '_'. (Rule 'Fields').",
+								"775,782": "Name should have prefix '_'. (Rule 'Fields').",
+								"817,831": "Convert to constant",
+								"834,835": "Initializing field by default value is redundant",
+								"986,987": "Initializing field by default value is redundant"
 							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 145.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -862,7 +895,7 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Assets/Scripts/FPS_CONTROLLER/CamControl.cs",
+					"file": "Assets/Scripts/FPSControl/CamControl.cs",
 					"semi_transient": false,
 					"settings":
 					{
@@ -873,26 +906,17 @@
 						"selection":
 						[
 							[
-								2615,
-								2615
+								1265,
+								1265
 							]
 						],
 						"settings":
 						{
-							"oops":
-							{
-								"2455,2456": "Cannot convert from UnityEngine.CharacterController to ?",
-								"2581,2584": "Could not determine type",
-								"2605,2613": "'?' does not contain a definition for 'velocity'",
-								"2628,2629": "'?' does not contain a definition for 'y'",
-								"2632,2633": "Cannot convert from System.Int32 to ?",
-								"2709,2718": "'?' does not contain a definition for 'magnitude'",
-								"2721,2724": "Error: Int32"
-							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1135.0,
+						"translation.y": 882.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
