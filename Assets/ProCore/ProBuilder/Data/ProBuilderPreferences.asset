@@ -13,6 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Bool_keys:
   - pbShowDetail
+  - pbShowCollider
+  - pbShowMover
+  - pbShowTrigger
   m_Int_keys:
   - pbDefaultEditLevel
   - pbDefaultSelectionMode
@@ -24,14 +27,16 @@ MonoBehaviour:
   - pbEditorScroll.y
   m_String_keys:
   - pbCurrentMaterialPalette
+  - pbVertexColorPrefs4
   m_Color_keys: []
   m_Material_keys: []
-  m_Bool_values: 01
+  m_Bool_values: 01010101
   m_Int_values: 0100000002000000000000000000000000000000
   m_Float_values:
   - 0
-  - 93
+  - 240
   m_String_values:
   - Assets/ProCore/ProBuilder/Data/Default Material Palette.asset
+  - RGBA(1.000, 0.259, 0.671, 1.000)
   m_Color_values: []
   m_Material_values: []
