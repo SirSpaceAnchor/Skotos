@@ -2,12 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class GameSettings
-{
-    public static bool PlayMultipleClips = true;
-}
-
-public enum StatusType { WakeUp, Pickup, SwitchGun };
+public enum StatusType { WakeUp, Pickup, DoorError, GunPew };
 
 public class AudioManager : MonoBehaviour
 {
@@ -19,16 +14,52 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] pickupClips;
     public AudioClip[] combatClips;
     public AudioClip[] calloutClips;
-    public AudioClip[] gunSwiches;
+
+    [Header("Random List")]
+    public AudioClip[] gunPews;
+
+    [Header("Ordered List")]
+    public AudioClip[] doorErrors;
 
     int callOutIndex = 0;
     int gunSwitchIndex = 0;
+    int doorErrorIndex = 0;
 
-    private void Awake()
+    public void Init()
     {
-        instance = this;
         AudioTransform = new GameObject("Audio").transform;
         AudioTransform.SetParent(this.transform);
+    }
+
+    public bool Play(AudioClip clip)
+    {
+        if (CreateSound(clip.name, clip))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void Play(StatusType type)
+    {
+        if (type == StatusType.DoorError)
+        {
+            if (CreateSound(type.ToString() + "-" + doorErrorIndex.ToString(), doorErrors[doorErrorIndex]))
+            {
+                doorErrorIndex++;
+                if (doorErrorIndex >= doorErrors.Length - 1)
+                {
+                    doorErrorIndex = doorErrors.Length - 1;
+                }
+            }
+        }
+        if (type == StatusType.GunPew)
+        {
+            int r = Random.Range(0, gunPews.Length);
+            if (CreateSound(type.ToString() + "-" + r.ToString(), gunPews[r]))
+            {
+            }
+        }
     }
 
     public void Play(string dialogue, bool isPlayer)
@@ -50,17 +81,6 @@ public class AudioManager : MonoBehaviour
                         if (callOutIndex >= calloutClips.Length)
                         {
                             callOutIndex = 0;
-                        }
-                    }
-                }
-                if (type == StatusType.SwitchGun)
-                {
-                    if (CreateSound(type.ToString(), gunSwiches[gunSwitchIndex]))
-                    {
-                        gunSwitchIndex++;
-                        if (gunSwitchIndex >= gunSwiches.Length)
-                        {
-                            gunSwitchIndex = 0;
                         }
                     }
                 }

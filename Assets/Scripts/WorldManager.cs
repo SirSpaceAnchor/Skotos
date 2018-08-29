@@ -43,13 +43,19 @@ public class WorldManager : MonoBehaviour
     public void ChangeLight()
     {
         world.ChangeLight();
-        lightButton.text = Strings.Light(world.isLight);
+        if (lightButton != null)
+        {
+            lightButton.text = Strings.Light(world.isLight);
+        }
     }
 
     public void ChangeMorph()
     {
         world.ChangeMorph();
-        morphButton.text = Strings.Morph(world.isMorph);
+        if (morphButton != null)
+        {
+            morphButton.text = Strings.Morph(world.isMorph);
+        }
     }
 
     public static bool isLight

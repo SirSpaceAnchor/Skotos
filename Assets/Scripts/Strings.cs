@@ -18,7 +18,7 @@ public static class Strings
     public const string GameMenu = "Menu_5.6.6"; // Remove -5.6.6 for 2018.2
     public const string GameLabs = "Labs_5.6.6"; // Remove -5.6.6 for 2018.2
     //public const string GameGame = "Level_0_5.6.6"; // Remove -5.6.6 for 2018.2
-    public const string GameGame = "Level_Random";
+    public const string GameGame = "Level_TestRoom01";
 
     public const string GameIntro_0 = "Show me how I got here!";
     public const string GameIntro_1 = "I don't need no intro";

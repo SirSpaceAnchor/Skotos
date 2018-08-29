@@ -171,8 +171,14 @@ public class KeyPadGO : MonoBehaviour
         if (CurrentCode.Length > 6)
         {
             CurrentCode = Strings.ERROR;
+            AudioManager.instance.Play(StatusType.DoorError);
+        }
+        else
+        {
+            AudioManager.instance.Play(StatusType.DoorError);
         }
         UnityEngine.Debug.Log("Code: " + CurrentCode.ToString());
+
     }
 
     void LockDoor()
@@ -208,9 +214,10 @@ public class KeyPadGO : MonoBehaviour
             else if (isDoorLocked)
             {
                 keyText.text = CurrentCode;
-                if (AccessCodes.ToList().Contains(CurrentCode))
                 //if (CurrentCode == AccessCode)
+                if (AccessCodes.ToList().Contains(CurrentCode))
                 {
+                    AudioManager.instance.Play(StatusType.DoorError);
                     UnlockDoor();
                 }
             }

@@ -10,6 +10,7 @@ namespace FC
 		public MovControl mc;
 		public CamControl cc;
 
+
 		void Start ()
 		{
 			cc.CameraInit();
@@ -18,13 +19,19 @@ namespace FC
 		
 		void Update ()
 		{
-			cc.FPSCounter();
-			cc.CameraRotation();
-			cc.CameraMovAdj();
+            cc.FPSCounter();
+            if (Game.isMenuActive == false)
+            {
+                if (Game.isPlayerLocked == false)
+                {
+                    cc.CameraRotation();
+                    cc.CameraMovAdj();
+                }
 
-			mc.InitMovement();
-			mc.InitMovementType();
-			mc.CalcMaxVel();
-		}
+                mc.InitMovement();
+                mc.InitMovementType();
+                mc.CalcMaxVel();
+            }
+        }
 	}
 }

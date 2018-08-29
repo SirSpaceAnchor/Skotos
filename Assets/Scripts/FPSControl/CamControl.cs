@@ -54,12 +54,37 @@ namespace FC
                 frameCount = 0;
                 dt -= 1.0f / fpsDisplayRate;
             }
-            /* Ensure that the cursor is locked into the screen */
-            if (Cursor.lockState != CursorLockMode.Locked)
+
+            if (Time.timeScale == 0f)
             {
-                if (Input.GetButtonDown("Fire1"))
-                    Cursor.lockState = CursorLockMode.Locked;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
+            else
+            {
+                if (Game.isPlayerLocked)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                }
+                else
+                {
+                    Cursor.lockState = CursorLockMode.Confined;
+                    Cursor.visible = false;
+                }
+            }
+            /* Ensure that the cursor is locked into the screen */
+            //if (Cursor.lockState != CursorLockMode.Locked)
+            //{
+            //    //if (Input.GetButtonDown("Fire1"))
+            //    if (Input.GetKeyDown(KeyCode.Escape))
+            //        Cursor.lockState = CursorLockMode.Locked;
+            //}
+            //else
+            //{
+            //    if (Input.GetKeyDown(KeyCode.Escape))
+            //        Cursor.lockState = CursorLockMode.Locked;
+            //}
         }
 	    
 	    public void CameraRotation()

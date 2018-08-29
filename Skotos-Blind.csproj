@@ -148,7 +148,10 @@
     <Compile Include="Assets\Scripts\LightMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\Micaiah\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Micaiah\AudioSound.cs" />
+    <Compile Include="Assets\Scripts\Micaiah\Game.cs" />
+    <Compile Include="Assets\Scripts\Micaiah\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Micaiah\HellRespawn.cs" />
+    <Compile Include="Assets\Scripts\Micaiah\ResearchPickUp.cs" />
     <Compile Include="Assets\Scripts\Old\RigidMover.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerGO.cs" />

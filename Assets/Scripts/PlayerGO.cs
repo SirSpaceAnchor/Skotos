@@ -22,6 +22,10 @@ public class PlayerGO : MonoBehaviour
     public TMP_Text text1;
     public TMP_Text text2;
 
+    public AudioClip[] clips;
+    public int clipIndex = 0;
+    public float SpeakTimer = 1f;
+
     public void Hurt(int damage)
     {
         player.TakeDamage(damage);
@@ -37,8 +41,10 @@ public class PlayerGO : MonoBehaviour
     {
         player = ScriptableObject.CreateInstance<Player>();
         playerName.text = player.Name;
-        AudioManager.instance.Play(StatusType.WakeUp.ToString(), true);
+        //AudioManager.instance.Play(StatusType.WakeUp.ToString(), true);
+        SpeakTimer = 1f;
     }
+
 
     // Update is called once per frame
     void Update()
@@ -50,7 +56,6 @@ public class PlayerGO : MonoBehaviour
             {
                 gunIndex = 0;
             }
-            AudioManager.instance.Play(StatusType.SwitchGun.ToString(), true);
         }
         if (Input.GetKeyDown(KeyCode.RightBracket))
         {
@@ -59,13 +64,42 @@ public class PlayerGO : MonoBehaviour
             {
                 gunIndex = 0;
             }
-            AudioManager.instance.Play(StatusType.SwitchGun.ToString(), true);
         }
 
         worldText.text = player.Health.ToString() + "/100 Health";
         playerExtra.text = player.Energy.ToString() + "/100 Energy";
-        text0.text = "Light Gun" + " 25/50";
+        // Removed bullets, and added in Dialogue to shorted dev time.
+        text0.text = "Light Gun";// + " 25/50";
         text1.text = Strings.Light(world.isLight);
         text2.text = Strings.Morph(world.isMorph);
+
+
+        if (SpeakTimer <= 0)
+        {
+            SpeakTimer = GameSettings.PlayerYakDelay;
+            if (clips.Length > clipIndex)
+            {
+                if (AudioManager.instance.Play(clips[clipIndex]))
+                {
+                    clipIndex++;
+                }
+            }
+            else
+            {
+                UnityEngine.Debug.Log("Ran out of One Liners");
+            }
+        }
+        SpeakTimer -= Time.deltaTime;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        ResearchPickUp note = other.GetComponent<ResearchPickUp>();
+        if (note != null)
+        {
+            AudioManager.instance.Play(note.clip);
+            SpeakTimer += 3f;
+            Destroy(note.gameObject);
+        }
     }
 }

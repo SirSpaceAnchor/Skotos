@@ -1,0 +1,83 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Micaiah-RealVO_data" version="1.3.0" audacityversion="2.1.2" sel0="37.7904761905" sel1="44.9892743764" vpos="0" h="0.0000000000" zoom="86.1328125000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="GENRE" value="FPS"/>
+		<tag name="ARTIST" value="Micaiah Stevens"/>
+		<tag name="TRACKNUMBER" value="01"/>
+		<tag name="TITLE" value="Player Actions"/>
+		<tag name="YEAR" value="2018"/>
+		<tag name="ALBUM" value="Skotos-Light"/>
+		<tag name="COMMENTS" value="First Pass Audio"/>
+	</tags>
+	<wavetrack name="Audio Track" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.15092971">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="572800">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000d0c.au" len="150528" min="-0.450713" max="0.403616" rms="0.024762"/>
+				</waveblock>
+				<waveblock start="150528">
+					<simpleblockfile filename="e0000535.au" len="150528" min="-0.172809" max="0.091833" rms="0.011536"/>
+				</waveblock>
+				<waveblock start="301056">
+					<simpleblockfile filename="e000019a.au" len="223232" min="-0.846069" max="0.813507" rms="0.0401"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000a95.au" len="48512" min="-0.52005" max="0.483795" rms="0.044499"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="14.31281179">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="229888">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000974.au" len="229888" min="-0.391785" max="0.276947" rms="0.021723"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="19.81823129">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="312320">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000f27.au" len="236443" min="-0.35144" max="0.276215" rms="0.018131"/>
+				</waveblock>
+				<waveblock start="236443">
+					<simpleblockfile filename="e00001d9.au" len="75877" min="-0.330994" max="0.352264" rms="0.021374"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="27.41115646">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="775195">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000929.au" len="259995" min="-0.336182" max="0.22699" rms="0.016263"/>
+				</waveblock>
+				<waveblock start="259995">
+					<simpleblockfile filename="e0000399.au" len="150578" min="-0.320618" max="0.355164" rms="0.0324"/>
+				</waveblock>
+				<waveblock start="410573">
+					<simpleblockfile filename="e0000fe7.au" len="150579" min="-0.254517" max="0.264893" rms="0.018648"/>
+				</waveblock>
+				<waveblock start="561152">
+					<simpleblockfile filename="e0000726.au" len="214043" min="-0.208374" max="0.138367" rms="0.011634"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<labeltrack name="Label Track" numlabels="13" height="73" minimized="0" isSelected="1">
+		<label t="1.2422675737" t1="2.2523356009" title="Real - Show Intro"/>
+		<label t="3.0534240363" t1="4.0634920635" title="Real - No intro"/>
+		<label t="4.8645804989" t1="6.3390476190" title="Real - Project Light"/>
+		<label t="6.9775963719" t1="8.0341043084" title="Real - Door 0"/>
+		<label t="8.4636734694" t1="9.4156916100" title="Real - Door 1"/>
+		<label t="9.9381405896" t1="11.1223582766" title="Real - Door 2"/>
+		<label t="11.3777777778" t1="13.1395918411" title="Real - Door 3"/>
+		<label t="14.3615419501" t1="15.5805895692" title="Narrator - Hint 0"/>
+		<label t="15.8824489796" t1="19.5256916082" title="Narrator - Hint 1"/>
+		<label t="19.8646712018" t1="25.7973696145" title="Narrator - LIght 43337"/>
+		<label t="27.9916553288" t1="30.2207709751" title="Research Note 1"/>
+		<label t="31.6720181406" t1="36.5830385488" title="Research Note 1B"/>
+		<label t="37.7904761905" t1="44.9892743764" title="Research Note 5c"/>
+	</labeltrack>
+</project>

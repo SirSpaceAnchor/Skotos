@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class GameResource
 {
-    public static string Folder = "Game";
+    public static string Folder = "Game-5.6.6";
 
     public static void CreateGameGO()
     {

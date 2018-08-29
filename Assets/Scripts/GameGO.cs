@@ -13,6 +13,9 @@ public class GameGO : MonoBehaviour
 {
     public static GameGO instance;
 
+    public AudioManager audioManager;
+    public WorldManager worldManager;
+
     public string activeSceneName = "";
 
     public GameObject mainMenuPanel;
@@ -21,11 +24,19 @@ public class GameGO : MonoBehaviour
     public ButtonGO menuButton;
     public ButtonGO startButton;
     public ButtonGO optionsButton;
+    public ButtonGO difficultyButton;
+    public ButtonGO menu2Button;
     public ButtonGO quitButton;
 
     public bool showIntro = true;
-
     public Scene currentScene;
+
+    public List<string> GameStates;
+
+    public AudioClip introClip;
+    public AudioClip introNoClip;
+    public AudioClip optionsClip;
+    public AudioClip difficultyClip;
 
     private void Awake()
     {
@@ -34,7 +45,14 @@ public class GameGO : MonoBehaviour
         {
             //UnityEngine.Debug.Log("Found a GameGO: " + gameObject.name);
             instance = this;
+            AudioManager.instance = audioManager;
+            AudioManager.instance.Init();
             DontDestroyOnLoad(this);
+            Restart();
+        }
+        else if (instance == this)
+        {
+
         }
         else
         {
@@ -47,6 +65,11 @@ public class GameGO : MonoBehaviour
 
     // Use this for initialization
     void Start()
+    {
+        UnityEngine.Debug.Log(name + " Starting");
+    }
+
+    void Restart()
     {
         currentScene = SceneManager.GetActiveScene();
         activeSceneName = currentScene.name;
@@ -77,11 +100,20 @@ public class GameGO : MonoBehaviour
             instance.menuButton.button.onClick.RemoveAllListeners();
             instance.menuButton.button.onClick.AddListener(instance.GameIntro);
         }
-
         if (instance.optionsButton != null)
         {
             instance.optionsButton.button.onClick.RemoveAllListeners();
             instance.optionsButton.button.onClick.AddListener(instance.GameOptions);
+        }
+        if (instance.difficultyButton != null)
+        {
+            instance.difficultyButton.button.onClick.RemoveAllListeners();
+            instance.difficultyButton.button.onClick.AddListener(instance.GameDifficulty);
+        }
+        if (instance.menu2Button != null)
+        {
+            instance.menu2Button.button.onClick.RemoveAllListeners();
+            instance.menu2Button.button.onClick.AddListener(instance.GameMainMenu);
         }
         if (instance.quitButton != null)
         {
@@ -93,6 +125,7 @@ public class GameGO : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameStates = new List<string>(Game.GetDisplays());
         if (instance == null)
         {
             return;
@@ -105,6 +138,7 @@ public class GameGO : MonoBehaviour
                 instance.startButton.text = "Resume";
                 CloseAll();
                 Time.timeScale = 1f;
+                Game.isMenuActive = false;
             }
             else
             {
@@ -112,6 +146,7 @@ public class GameGO : MonoBehaviour
                 gameMenuPanel.SetActive(true);
                 instance.startButton.text = "(Paused) Resume";
                 Time.timeScale = 0f;
+                Game.isMenuActive = true;
             }
         }
     }
@@ -122,10 +157,17 @@ public class GameGO : MonoBehaviour
         if (instance.showIntro)
         {
             intro = "(with intro)";
+            AudioManager.instance.Play(instance.introClip);
+            instance.worldManager.ChangeLight();
+        }
+        else
+        {
+            AudioManager.instance.Play(instance.introNoClip);
         }
         instance.startButton.text = "Start" + Strings.Space + intro;
         instance.startButton.button.onClick.RemoveAllListeners();
         instance.startButton.button.onClick.AddListener(instance.GameStart);
+        instance.menu2Button.gameObject.SetActive(false);
     }
 
     public static void StartGame()
@@ -133,6 +175,19 @@ public class GameGO : MonoBehaviour
         instance.startButton.text = "Resume";
         instance.startButton.button.onClick.RemoveAllListeners();
         instance.startButton.button.onClick.AddListener(instance.GameResume);
+        instance.menu2Button.gameObject.SetActive(true);
+    }
+
+    public void GameMainMenu()
+    {
+        SceneManager.sceneLoaded += OnSceneRestarted;
+        // Are you sure??
+        SceneManager.LoadScene(Strings.GameMenu);
+    }
+
+    private void OnSceneRestarted(Scene arg0, LoadSceneMode arg1)
+    {
+        Restart();
     }
 
     public static void SaveGame()
@@ -212,9 +267,26 @@ public class GameGO : MonoBehaviour
         gameMenuPanel.SetActive(true);
     }
 
+    private bool clickOnceOptions = false;
     public void GameOptions()
     {
+        if (clickOnceOptions == false)
+        {
+            AudioManager.instance.Play(instance.optionsClip);
+            clickOnceOptions = true;
+        }
+        else
+        {
+            // Play Clip 2 (NO Options for you!)
+            AudioManager.instance.Play(instance.optionsClip);
+            difficultyButton.gameObject.SetActive(true);
+        }
         /// RIGHT
+    }
+
+    public void GameDifficulty()
+    {
+        AudioManager.instance.Play(instance.difficultyClip);
     }
 
     public static void Check()
