@@ -8,17 +8,22 @@ public class Player : ScriptableObject
 { 
     public string Name = "Sir Space Anchor";
     public int Health = 100;
+    public int HealthMax = 100;
     public int Energy = 100;
+    public int EnergyMax = 100;
     public RankType damage = RankType.Weak;
+    public bool isDead = false;
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
-        Health -= damage;
+
+        Health -= Mathf.RoundToInt(damage);
     }
 
-    public void HealDamage(int damage)
+    public void HealDamage(float damage)
     {
-        Health += damage;
+        //Health += damage;
+        Health += Mathf.RoundToInt(damage);
     }
 
     public int Damage

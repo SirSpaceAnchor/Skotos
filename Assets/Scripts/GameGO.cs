@@ -235,7 +235,6 @@ public class GameGO : MonoBehaviour
     {
         CloseAll();
         StartGame(); // FOR Now?? move to a better area? - Setup menu to be for the game.
-#if UNITY_EDITOR
         if (showIntro)
         {
             SceneManager.LoadScene(Strings.GameLabs);
@@ -244,9 +243,6 @@ public class GameGO : MonoBehaviour
         {
             SceneManager.LoadScene(Strings.GameGame);
         }
-#else
-        SceneManager.LoadScene(Strings.GameLabs);
-#endif
     }
 
     private void CloseAll()

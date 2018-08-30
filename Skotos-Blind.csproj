@@ -137,6 +137,8 @@
     <Compile Include="Assets\Scripts\GameGO.cs" />
     <Compile Include="Assets\Scripts\GameResource.cs" />
     <Compile Include="Assets\Scripts\GunGO.cs" />
+    <Compile Include="Assets\Scripts\Guns\DamageGO.cs" />
+    <Compile Include="Assets\Scripts\Guns\ProjectileGO.cs" />
     <Compile Include="Assets\Scripts\Intro\DoorGO.cs" />
     <Compile Include="Assets\Scripts\Intro\DoorPanel.cs" />
     <Compile Include="Assets\Scripts\Intro\Enums.cs" />
@@ -148,10 +150,13 @@
     <Compile Include="Assets\Scripts\LightMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\Micaiah\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Micaiah\AudioSound.cs" />
+    <Compile Include="Assets\Scripts\Micaiah\EnemyGO.cs" />
     <Compile Include="Assets\Scripts\Micaiah\Game.cs" />
     <Compile Include="Assets\Scripts\Micaiah\GameSettings.cs" />
+    <Compile Include="Assets\Scripts\Micaiah\HealthSystem.cs" />
     <Compile Include="Assets\Scripts\Micaiah\HellRespawn.cs" />
     <Compile Include="Assets\Scripts\Micaiah\ResearchPickUp.cs" />
+    <Compile Include="Assets\Scripts\Micaiah\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Old\RigidMover.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerGO.cs" />

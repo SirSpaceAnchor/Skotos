@@ -30,6 +30,9 @@ public class LabsDoorEnter : MonoBehaviour
         PersonController pc = other.GetComponent<PersonController>();
         if (pc != null)
         {
+            Game.isPlayerLocked = false;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = false;
             SceneManager.LoadScene(Strings.GameGame);
         }
     }

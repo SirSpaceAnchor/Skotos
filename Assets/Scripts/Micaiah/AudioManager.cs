@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum StatusType { WakeUp, Pickup, DoorError, GunPew };
+// ADD in Vrom (as many as pew pews)
+
+public enum StatusType { WakeUp, Pickup, DoorError, GunPew, GunVrom };
 
 public class AudioManager : MonoBehaviour
 {
@@ -92,7 +94,7 @@ public class AudioManager : MonoBehaviour
     {
         if (AudioTransform.childCount == 0 || GameSettings.PlayMultipleClips)
         {
-            UnityEngine.Debug.Log("Sound Play: " + sound);
+            //UnityEngine.Debug.Log("Sound Play: " + sound);
             AudioSound aSound = GameObject.Instantiate(audioSoundPrefab);
             aSound.transform.SetParent(AudioTransform);
             aSound.audioClip = clip;

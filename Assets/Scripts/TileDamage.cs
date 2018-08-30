@@ -25,7 +25,7 @@ public class TileDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerGO playerGO = other.GetComponent<PlayerGO>();
+        PlayerBaseGO playerGO = other.GetComponent<PlayerBaseGO>();
         if (playerGO != null)
         {
             //UnityEngine.Debug.Log("Player Entered Tile");
@@ -48,7 +48,7 @@ public class TileDamage : MonoBehaviour
             else
             {
                 UnityEngine.Debug.Log("Player Entered Tile");
-                playerGO.Hurt(strength);
+                playerGO.TakeDamage(strength);
                 lastTime = Time.time;
             }
         }

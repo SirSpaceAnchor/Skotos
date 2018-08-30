@@ -6,9 +6,8 @@ using UnityEngine;
 /// <summary>
 /// This is our Player's MAIN object (easier than using tags)
 /// </summary>
-public class PlayerGO : MonoBehaviour
+public class PlayerGO : PlayerBaseGO
 {
-    public Player player;
     public World world;
 
     public int gunIndex = 0;
@@ -26,10 +25,9 @@ public class PlayerGO : MonoBehaviour
     public int clipIndex = 0;
     public float SpeakTimer = 1f;
 
-    public void Hurt(int damage)
-    {
-        player.TakeDamage(damage);
-    }
+    public GunGO gun1;
+    public GunGO gun2;
+    public bool isGunRight = true;
 
     public void Heal(int damage)
     {
@@ -66,12 +64,38 @@ public class PlayerGO : MonoBehaviour
             }
         }
 
-        worldText.text = player.Health.ToString() + "/100 Health";
-        playerExtra.text = player.Energy.ToString() + "/100 Energy";
+        worldText.text = player.Health.ToString() + "/" + player.HealthMax.ToString() + " Health";
+        playerExtra.text = player.Energy.ToString() + "/" + player.EnergyMax.ToString() + " Energy";
         // Removed bullets, and added in Dialogue to shorted dev time.
         text0.text = "Light Gun";// + " 25/50";
         text1.text = Strings.Light(world.isLight);
         text2.text = Strings.Morph(world.isMorph);
+
+        //if (Input.GetKeyDown("Fire1") && isKickingBack == false)
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (gun1.akimbo)
+            {
+                if (isGunRight)
+                {
+                    if (gun1.Fire())
+                    {
+                        isGunRight = !isGunRight;
+                    }
+                }
+                else if (isGunRight == false)
+                {
+                    if (gun2.Fire())
+                    {
+                        isGunRight = !isGunRight;
+                    }
+                }
+            }
+            else
+            {
+                gun1.Fire();
+            }
+        }
 
 
         if (SpeakTimer <= 0)
@@ -94,6 +118,7 @@ public class PlayerGO : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        UnityEngine.Debug.Log("Collider: " + other.name);
         ResearchPickUp note = other.GetComponent<ResearchPickUp>();
         if (note != null)
         {
@@ -103,3 +128,4 @@ public class PlayerGO : MonoBehaviour
         }
     }
 }
+
