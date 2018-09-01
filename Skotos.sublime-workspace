@@ -527,6 +527,15 @@
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "Assets/Scripts/FPSControl/MovControl.cs",
+			"settings":
+			{
+				"buffer_size": 5736,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -600,10 +609,16 @@
 	[
 		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets",
 		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts",
-		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPSControl"
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPSControl",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/Intro",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/Old"
 	],
 	"file_history":
 	[
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos_Technical_2018/Assets/Scripts/FPSControl/PlayerControl.cs",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos_Technical_2018/Assets/Scripts/FPSControl/MovControl.cs",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos_Technical_2018/Assets/Scripts/FPSControl/CamControl.cs",
+		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPSControl/PlayerControl.cs",
 		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPSControl/MovControl.cs",
 		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/ProCore/ProBuilder/Shader/pb_StandardVertexColor.shader",
 		"/C/Users/Daniel Zamora/Documents/GitHub/Skotos/Assets/Scripts/FPSControl/CamControl.cs",
@@ -727,15 +742,11 @@
 		"/C/Users/Daniel Zamora/TPS_A01/Assets/Scripts/Utilities/InputManager.cs",
 		"/C/Users/Daniel Zamora/TPS_A01/Assets/Data/Actions/InputManager.cs",
 		"/C/Users/Daniel Zamora/TPS_A01/Assets/Scripts/ActionHook.cs",
-		"/C/Users/Daniel Zamora/TPS_A01/TPSA01.sublime-project",
-		"/C/Users/Daniel Zamora/TPS_A01/Assets/Scripts/Transition.cs",
-		"/C/Users/Daniel Zamora/TPS_A01/",
-		"/C/Users/Daniel Zamora/TPS_A01/Assets/TPS_A01.sublime-project",
-		"/C/Users/Daniel Zamora/TPS_A01/Assets/Scriptables/Helpers/AssignTransform.cs"
+		"/C/Users/Daniel Zamora/TPS_A01/TPSA01.sublime-project"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -767,7 +778,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -783,25 +794,46 @@
 						"selection":
 						[
 							[
-								435,
-								435
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"oops":
-							{
-								"0,5": "Using directive is not used by code and can be removed safely.",
-								"171,181": "Name should have prefix '_'. (Rule 'Fields').",
-								"203,205": "Name should have prefix '_'. (Rule 'Fields').",
-								"227,229": "Name should have prefix '_'. (Rule 'Fields').",
-								"26,31": "Using directive is not used by code and can be removed safely."
-							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/FPSControl/MovControl.cs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5736,
+								5736
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3618.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

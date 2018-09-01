@@ -16,6 +16,13 @@ MonoBehaviour:
   - pbShowCollider
   - pbShowMover
   - pbShowTrigger
+  - pbObjExportRightHanded
+  - pbObjApplyTransform
+  - pbObjExportCopyTextures
+  - pbObjExportVertexColors
+  - pbObjTextureOffsetScale
+  - pbObjQuads
+  - pbExportAsGroup
   m_Int_keys:
   - pbDefaultEditLevel
   - pbDefaultSelectionMode
@@ -30,11 +37,11 @@ MonoBehaviour:
   - pbVertexColorPrefs4
   m_Color_keys: []
   m_Material_keys: []
-  m_Bool_values: 01010101
-  m_Int_values: 0100000002000000000000000000000000000000
+  m_Bool_values: 0101010101000000000000
+  m_Int_values: 0000000002000000000000000000000000000000
   m_Float_values:
   - 0
-  - 240
+  - 93
   m_String_values:
   - Assets/ProCore/ProBuilder/Data/Default Material Palette.asset
   - RGBA(1.000, 0.259, 0.671, 1.000)
